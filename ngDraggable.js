@@ -246,7 +246,7 @@ angular.module("ngDraggable", [])
                     var onDragEnd = function (evt, obj) {
                         
                         // don't listen to drop events if this is the element being dragged
-                        if (!_dropEnabled || _myid === obj.uid)return;
+                        if (!_dropEnabled)return;
                         if (isTouching(obj.x, obj.y, obj.element)) {
                             // call the ngDraggable ngDragSuccess element callback
                            if(obj.callback){
